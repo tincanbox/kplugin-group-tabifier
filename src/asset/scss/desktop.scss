@@ -26,3 +26,33 @@
 .gaia-argoui-app-show-sidebar {
   z-index: 10;
 }
+
+.gaia-argoui-app-edit-buttons-contents,
+.gaia-argoui-app-show-toolbar,
+.gaia-argoui-app-edit-form
+{
+  box-shadow: 0 6px 4px rgba(0,0,0, .15);
+}
+
+/* create.show
+ */
+.gaia-argoui-app-edit-form {
+  .gaia-argoui-app-edit-buttons {
+    border-bottom: 0;
+  }
+  #kplugin-group-tabifier-wrapper {
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+
+/*
+ */
+.gaia-argoui-app-edit-buttons-contents {
+  .gaia-argoui-app-edit-buttons {
+    border-bottom: 0;
+  }
+
+  #kplugin-group-tabifier-wrapper {
+    border-bottom: 1px solid #eaeaea;
+  }
+}
