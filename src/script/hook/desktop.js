@@ -176,7 +176,6 @@ import '../../asset/scss/desktop.scss';
   }
 
   function update_info(){
-    console.log("update info");
     C.initial_offset = $(C.selector.target_wrapper).offset().top + 18;
 
     C.wait_scrolltop
