@@ -3,9 +3,19 @@
   background: #fff;
   border-top: 1px solid #eaeaea;
   white-space: nowrap;
-  overflow-x: scroll;
+  height: 33px;
+  max-height: 33px;
+  overflow: hidden;
+
+  & > .inner {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: none;
+    box-sizing: border-box;
+  }
 
   .kplugin-group-tabifier-group-anchor {
+    font-size: 14px;
     transition: all .2s;
     padding: 6px 12px;
     display: inline-block;

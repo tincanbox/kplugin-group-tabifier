@@ -66,6 +66,7 @@ import '../../asset/scss/desktop.scss';
     return find_wrapper().length > 0;
   }
 
+
   function init(){
     C.wrapper = $('<section>');
 
@@ -100,22 +101,25 @@ import '../../asset/scss/desktop.scss';
   function build(o){
     var t = $(C.selector.target_cont);
     var w = C.wrapper;
+    var wi = $('<div class="inner">');
 
     w.attr('id', C.wrapper_id);
     w.addClass('BSTRP');
     w.on('click', '.' + C.selector.link_group_class, action);
 
+
     // add Top
-    w.append(build_anchor({
+    wi.append(build_anchor({
       index: -1,
       name: "▲"
     }));
 
     var data = update_info();
     for(var k in data){
-      w.append(build_anchor(data[k]));
+      wi.append(build_anchor(data[k]));
     }
 
+    w.append(wi);
     t[o.position](w);
     return t;
   }
