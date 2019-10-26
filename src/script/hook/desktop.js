@@ -180,7 +180,7 @@ import '../../asset/scss/desktop.scss';
   }
 
   function update_info(){
-    C.initial_offset = $(C.selector.target_wrapper).offset().top + 18;
+    C.initial_offset = $(C.selector.target_wrapper).offset().top + 24;
 
     C.wait_scrolltop
       = fetch_height([
