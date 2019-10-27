@@ -17,14 +17,14 @@ import '../../asset/scss/desktop.scss';
       link_group_class: 'kplugin-group-tabifier-group-anchor',
       target_wrapper: '#record-gaia',
       target_cont: null,
-      target_list: '.control-group-gaia',
-      target_label: '.group-label-gaia',
+      target_list: '.group-label-gaia',
       exclude_offset: 0
     }
   };
 
   var S = {
-    info: {}
+    info: {},
+    config: K.config.fetch()
   };
 
   function DestInfo($el, i){
@@ -33,7 +33,7 @@ import '../../asset/scss/desktop.scss';
     o.$el = $el;
     o.index = i;
     o.position = $el.offset().top;
-    o.name = $el.find(C.selector.target_label).text();
+    o.name = $el.text();
   }
 
   var p = K.init();
@@ -69,6 +69,15 @@ import '../../asset/scss/desktop.scss';
 
   function init(){
     C.wrapper = $('<section>');
+
+    if(S.config.json.table){
+      var sels = [];
+      for(var a of S.config.json.table){
+        sels.push(a.selector);
+      }
+      C.selector.target_list += ", " + sels.join(',');
+    }
+    console.log("C", C.selector.target_list);
 
     update_info();
     build({

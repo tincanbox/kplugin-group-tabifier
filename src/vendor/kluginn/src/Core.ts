@@ -2,6 +2,8 @@ import Config from './lib/Config';
 import API from './lib/API';
 import UI from './lib/UI';
 import Debug from './lib/Debug';
+import _file from './lib/file';
+import _csv from './lib/csv';
 
 import Service_GoogleAPI from './lib/service/GoogleAPI';
 
@@ -22,6 +24,8 @@ export default class Kluginn {
   api: API;
   ui: UI;
   debug: Debug;
+  file: _file;
+  csv: _csv;
   vendor: object;
   service: object;
   external: object;
@@ -40,6 +44,8 @@ export default class Kluginn {
     this.api = new API(this);
     this.ui = new UI(this);
     this.debug = new Debug(this);
+    this.file = new _file(this);
+    this.csv = new _csv(this);
 
     // vendor libraries
     this.vendor = {};

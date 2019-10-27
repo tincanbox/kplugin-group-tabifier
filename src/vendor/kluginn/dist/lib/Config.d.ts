@@ -7,9 +7,7 @@ export default class __Config extends Submodule {
     constructor(c: any, opt?: {});
     init(): void;
     save(p: any): any;
-    fetch(): {
-        [key: string]: any;
-    };
+    fetch(): any;
     update_form(): void;
     update_input(o: any): void;
     retrieve_form_data(): {};
